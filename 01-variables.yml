@@ -7,3 +7,20 @@
     - name: Print URL
       ansible.builtin.debug:
         msg: URL is - {{url}}
+
+## Task level variables
+- name: Task level varaible
+  hosts: localhost
+  connection: local
+  vars:
+    url: www.google.com
+    intTest: 200
+    boolTest: false
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: Variables are - url - {{url}}, Integer type is - {{intTest}}, Booleab type is - {{boolTest}}
+  vars:
+    url: www.tasklevel.google.com
+    intTest: 400
+    boolTest: true
