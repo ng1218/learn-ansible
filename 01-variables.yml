@@ -19,7 +19,7 @@
   tasks:
     - name: Print URL
       ansible.builtin.debug:
-        msg: Variables are - url - {{url}}, Integer type is - {{intTest[2]}}, Booleab type is - {{boolTest}}
+        msg: Variables are - url - {{url}}, Integer type is - {{intTest[1]}}, Booleab type is - {{boolTest}}
   vars:
     url: www.tasklevel.google.com
     intTest: 
