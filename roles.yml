@@ -1,0 +1,5 @@
+- name: Testing role varaible
+  hosts: localhost
+  connection: local
+  roles:
+    - demo
