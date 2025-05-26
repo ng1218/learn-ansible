@@ -1,7 +1,7 @@
-name: Play level varaible
-hosts: localhost
-connection: local
-tasks:
-  name: Print URL
-  ansible.builtin.debug:
-   msg: URL is - {{url}}
+- name: Play level varaible
+  hosts: localhost
+  connection: local
+  tasks:
+    name: Print URL
+    ansible.builtin.debug:
+    msg: URL is - {{url}}
