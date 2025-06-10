@@ -4,4 +4,4 @@
   tasks:
     name: Get secret KV
     ansible.builtin.debug::
-    response: "{{ lookup('community.hashi_vault.vault_kv2_get', 'demo', url='http://vault.nareshdevops1218.online:8201') }}"
+    msg: "{{ lookup('community.hashi_vault.vault_kv2_get', 'demo', url='http://vault.nareshdevops1218.online:8201') }}"
