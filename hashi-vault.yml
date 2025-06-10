@@ -1,0 +1,5 @@
+- name: Demo for getting vault secrets
+  hosts: localhost
+  connection: local
+  ansible.builtin.set_fact:
+    response: "{{ lookup('community.hashi_vault.vault_kv2_get', 'demo', url='http://vault.nareshdevops1218.online:8201') }}"
