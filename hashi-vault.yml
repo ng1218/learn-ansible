@@ -1,4 +1,4 @@
-- name: Demo for getting vault secrets
+- name: Retrive hashi vault secrets
   hosts: localhost
   connection: local
   ansible.builtin.set_fact:
