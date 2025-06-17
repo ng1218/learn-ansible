@@ -1,0 +1,9 @@
+- name: Create nginx docker container
+  hosts: localhost
+  connection: local
+  community.docker.docker_container:
+    name: nginx
+    image: docker.io/nginx
+    state: started
+    ports:
+     - "8080:80"
