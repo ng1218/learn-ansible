@@ -1,9 +1,10 @@
-- name: Create nginx docker container
+- name: Docker
   hosts: localhost
   connection: local
   tasks:
-    - name: nginx container:
+    - name: Nginx container
       community.docker.docker_container:
+        name: nginx-sample
         image: docker.io/nginx
         state: started
         ports:
