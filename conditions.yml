@@ -2,24 +2,24 @@
   connection: local
   hosts: localhost
   tasks:
-    - name: Check vegetables conditions
-      ansible.builtin.debug:
-        msg : Inside vegatable condition 
+   - name: Check vegetables conditions
+     ansible.builtin.debug:
+      msg : Inside vegatable condition 
       when: vegatables == ""green"
     
-    - name: Boolean conditions
-      ansible.builtin.debug:
-        msg : Inside vegatable condition boolean
+   - name: Boolean conditions
+     ansible.builtin.debug:
+      msg : Inside vegatable condition boolean
       when: vegatables | bool
 
-    - name: Number comaprision
-      ansible.builtin.debug:
-        msg : "{{ countx }} is greater than 0"
+   - name: Number comaprision
+     ansible.builtin.debug:
+      msg : "{{ countx }} is greater than 0"
       when: countx | int > 0
     
-    - name: Print Name and Quantity
-      ansible.builtin.debug:
-        msg : Fruit name is {{ item.name }}, Quantity is {{ item["quantity"] }}
+   - name: Print Name and Quantity
+     ansible.builtin.debug:
+      msg : Fruit name is {{ item.name }}, Quantity is {{ item["quantity"] }}
       loop:
         - { name: Apple, quantity: 20 }
         - { name: Orange, quantity: 100 }
