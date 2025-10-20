@@ -5,7 +5,7 @@
    - name: Check vegetables conditions
      ansible.builtin.debug:
       msg : Inside vegatable condition 
-     when: vegatables == ""green"
+     when: vegatables == "green"
     
    - name: Boolean conditions
      ansible.builtin.debug:
