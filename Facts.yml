@@ -1,0 +1,22 @@
+- name: Ansible Facts Demo
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Ansible Facts Demo
+      ansible.builtin.debug:
+        msg: "{{ ansible_virtualization_type }}"
+      register: virtual_type
+    
+    - name: IP Address
+      ansible.builtin.debug:
+        msg: "{{ ansible_all_ipv4_addresses }}"
+      register: ipaddress
+    
+    - name: Printing registered varaibles
+      ansible.builtin.debug:
+        msg: "{{ virtual_type }}"
+    
+    - name: Printing registered varaibles
+      ansible.builtin.debug:
+        msg: "{{ ipaddress }}"
+      
